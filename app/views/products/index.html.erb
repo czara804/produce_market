@@ -1,2 +1,16 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>You are part of the Preston Community</h1>
+
+
+
+
+
+<div class='product-card'>
+<% @products.each do |product| %>
+<p><%= product.name %></p>
+<p><%= product.description %></p>
+<p>$<%= product.price %> for <%= product.quantity %></p>
+<p>Seller</p>
+<% end %>
+</div>
+
+
