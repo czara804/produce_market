@@ -4,10 +4,10 @@
 
 
 body {
-  font-family: 'Nanum Gothic', ;
+  font-family: 'Nanum Gothic' ;
 }
 .products-group {
-  display: grid;
+  display: grid | inline-flex;
   padding: 10%;
   border: 2px solid black;
 }
