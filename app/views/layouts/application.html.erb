@@ -6,10 +6,25 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <header>
+    <div>
+    <%= image_tag "juice.png" %>
+    SharedTable
+    </div>
+    <nav>
+      <ul class='navlinks'>
+        <li><%= link_to 'Produce', products_path %></li>
+        <li><%= link_to 'Contribute', new_product_path %></li>
+        <li><%= link_to 'About us', products_path %></li>
+      </ul>
+    </nav>
+  </header>
+
     <%= yield %>
   </body>
 </html>

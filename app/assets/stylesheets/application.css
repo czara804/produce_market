@@ -15,3 +15,51 @@
  */
 
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+nav li {
+  font-weight: 400;
+  font-size: 16px;
+  color: antiquewhite;
+  list-style-type: none;
+}
+
+/* .navlinks {
+  text-decoration: none;
+} */
+
+
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.navlinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navlinks a {
+
+}
+
+.navlinks li:hover {
+  color: brown;
+}
+
+header img {
+  height: 30px;
+  width: 20px;
+}

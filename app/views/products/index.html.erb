@@ -1,16 +1,20 @@
 <h1>You are part of the Preston Community</h1>
 
+<div>
 
 
 
+<div class='products-group'>
 
-<div class='product-card'>
 <% @products.each do |product| %>
-<p><%= product.name %></p>
-<p><%= product.description %></p>
-<p>$<%= product.price %> for <%= product.quantity %></p>
-<p>Seller</p>
+<div class='product-card'>
+  <p><%= product.name %></p>
+  <p><%= product.description %></p>
+  <p>$<%= product.price %> for <%= product.quantity %></p>
+  <p>Seller</p>
+</div>
 <% end %>
 </div>
 
 
+<div>
