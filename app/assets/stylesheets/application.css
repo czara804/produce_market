@@ -19,7 +19,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: gray;
+  background-color: bisque;
 }
 
 nav li {
@@ -37,7 +37,7 @@ nav li {
 
 header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
   background-color: coral;
@@ -52,9 +52,9 @@ header {
   padding: 0px 20px;
 }
 
-.navlinks a {
+/* .navlinks a {
 
-}
+} */
 
 .navlinks li:hover {
   color: brown;
