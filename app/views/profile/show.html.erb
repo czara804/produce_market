@@ -1,0 +1,22 @@
+<h1>Profile</h1>
+<h3>Welcome <%= current_user.email%> </h3>
+<p>Name: <%= current_user.firstname %> <%= current_user.lastname %> </p>
+<p>Bio: <%= current_user.bio %></p>
+
+<%= link_to "edit details", edit_user_registration_path %>
+
+<h2>My products</h2>
+<% @products.each do |product|%>
+<p> <%= product.name  %>
+<%= link_to "Edit product", edit_product_path(product) %>
+<%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>
+<% end %>
+
+<%= link_to "add a product", new_product_path %>
+
+
+
+
+<p>Find me in app/views/profile/show.html.erb</p>
+

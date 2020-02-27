@@ -34,8 +34,17 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  border-left: solid 5px black;
+  border: solid 2px black;
   margin-left: 10%;
+  margin-right: 10%;
 }
 
+// add/edit product form 
+.field {
+  margin-left: 2%;
+  padding: 2%;
+}
 
+.actions {
+  padding: 2%;
+}

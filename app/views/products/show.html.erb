@@ -1,8 +1,12 @@
 <h1><%= @product.name %> </h1>
 
-   <p><%= @product.description %></p>
+   <p>Description: <%= @product.description %></p>
+      <p>Cost: </p>
       <p>$<%= @product.price %> for <%= @product.quantity %></p>
-      <p><%= image_tag @product.photos if @product.photos.attached? %> </p>
+      <p><%= image_tag @product.photo if @product.photo.attached? %> </p>
+      <p><%= @product.delivery_option %> available</p>
+
+
 
 
 
