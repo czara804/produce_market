@@ -7,8 +7,9 @@
   <div class='product-box'>
     <div class='product-card'>
       <p class='name'><%= product.name %></p>
+      <div class="product-photo">
       <%= image_tag product.photo if product.photo.attached? %>
-
+      </div>
       <%# <p><%= product.description %>
       <p>$<%= product.price %> for <%= product.quantity %></p>
       <p>Seller: <%= product.user.firstname %> </p>
