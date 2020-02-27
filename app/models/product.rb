@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_one_attached :photo
+  has_many_attached :photos
   validates :delivery_option, inclusion: { in: %w[pick-up delivery either] }
   belongs_to :user
 end

@@ -1,0 +1,53 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %></h2>
+
+      <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class='basic-prod-form'>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>$
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Images" %>
+    <%= form.file_field :photo, accept: 'image/jpeg, image/png, image/jpg, image/gif',  multiple: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_option_delivery, 'Delivery' %>
+    <%= form.radio_button :delivery_option, 'delivery' %>
+    <%= form.label :delivery_option_pickup, 'Pick-up' %>
+    <%= form.radio_button :delivery_option, 'pick-up' %>
+    <%= form.label :delivery_option_either, 'Delivery/Pick-up' %>
+    <%= form.radio_button :delivery_option, 'either' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+</div>
+<% end %>

@@ -14,12 +14,28 @@ body {
   border: 2px solid black;
 }
 
+
 .product-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 2px solid black;
+  border-radius: 30px;
   background-color: honeydew;
+  height: 250px;
+}
+
+.name {
+  border: 2px solid black;
+}
+
+
+.basic-prod-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border-left: solid 5px black;
+  margin-left: 10%;
 }
 
 

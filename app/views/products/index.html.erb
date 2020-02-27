@@ -2,18 +2,22 @@
 
 <div>
 
-
-
 <div class='products-group'>
+  <% @products.each do |product| %>
+  <div class='product-box'>
+    <div class='product-card'>
+      <p class='name'><%= product.name %></p>
+      <% image_tag product.photos if product.photos.attached? %>
 
-<% @products.each do |product| %>
-  <div class='product-card'>
-    <p><%= product.name %></p>
-    <p><%= product.description %></p>
-    <p>$<%= product.price %> for <%= product.quantity %></p>
-    <p>Seller</p>
+      <%# <p><%= product.description %>
+      <p>$<%= product.price %> for <%= product.quantity %></p>
+      <p>Seller: <%= product.user %> </p>
+
+      <p><%= link_to 'See more details', product_path(product) %>
+    </div>
   </div>
   <% end %>
+
 </div>
 
 
