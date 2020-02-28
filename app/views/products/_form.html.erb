@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :date_available %>
+    <%= form.date_field :date_available %>
+  </div>
+
+  <div class="field">
     <%= form.label "Images" %>
     <%= form.file_field :photo, accept: 'image/jpeg, image/png, image/jpg, image/gif' %>
   </div>

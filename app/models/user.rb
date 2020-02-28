@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :products
   has_one_attached :profile
+  has_many :wishlist_products
 end

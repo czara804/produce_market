@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protected
 
     def configure_permitted_parameters
-        devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :bio, :firstname, :lastname)}
+        devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :bio, :firstname, :lastname, :profile)}
     end
 
     def after_update_path_for(resource)

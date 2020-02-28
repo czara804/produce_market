@@ -12,10 +12,11 @@
 
   <body>
   <header>
-   <div>
+   <div class='user-nav'>
       <% if user_signed_in? %>
-        Welcome, <%= current_user.email%>
-        <%= link_to 'My profile', profile_show_path %>
+        <%= image_tag current_user.profile if current_user.profile.attached? %>
+        Welcome, 
+        <%= link_to current_user.firstname, profile_show_path %> .|.
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to 'Sign up', new_user_registration_path %>
@@ -23,8 +24,8 @@
       <% end %>
     </div>
     <div>
-    <%= image_tag "juice.png" %>
-    SharedTable
+    <%# <%= image_tag "juice.png" %> 
+    <h2><%= link_to 'Agora', '/' %></h2>
     </div>
     <nav>
    

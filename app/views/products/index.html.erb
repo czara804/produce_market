@@ -2,30 +2,28 @@
 
 <div>
 
-<div class='products-group'>
-  <% @products.each do |product| %>
-  <div class='product-box'>
-    <div class='product-card'>
-      <p class='name'><%= product.name %></p>
-      <div class="product-photo">
-      <%= image_tag product.photo if product.photo.attached? %>
-      </div>
-      <%# <p><%= product.description %>
-      <p>$<%= product.price %> for <%= product.quantity %></p>
-      <p>Seller: <%= product.user.firstname %> </p>
-
-      <p><%= link_to 'See more details', product_path(product) %></p>
-      <% if user_signed_in? && product.user_id == current_user.id %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure?'} %>
-      <% end %>
-
-      
+  <div class='products-group'>
+    <% @products.each do |product| %>
+    
+      <div class='product-card'>
+        <h2 class='name'><%= product.name %></h2>
+        <%= button_to 'Add to wishlist', add_wishlist_product_path(product) %>
+        <div class="product-photo">
+          <%= image_tag product.photo if product.photo.attached? %>
+        </div>
+        <%# <p><%= product.description %>
+        <div>$<%= product.price %> for <%= product.quantity %></div>
+        <div>Seller: <%= product.user.firstname %> </div>
+        <div><%= link_to 'See more details', product_path(product) %>
+        <% if user_signed_in? && product.user_id == current_user.id %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure?'} %>
+        <% end %>
+        </div>
     </div>
+    <% end %>
+
   </div>
-  <% end %>
+
 
 </div>
-
-
-<div>
