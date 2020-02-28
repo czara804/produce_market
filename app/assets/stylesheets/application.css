@@ -33,7 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: cornflowerblue;
+  background-color:  bisque;
 }
 
 header img {
@@ -63,8 +63,12 @@ a:link {
 
 a:visited {
   text-decoration: none;
+  color: darkgreen;
 }
 
 .welcome-wrapper {
-  background-image: url(/assets/images/hello-you.jpg); 
+  background-image: url(/assets/apricot.jpg);
+  background-size: cover ;
+  height: 100vh;
+  background-color: darkblue;
 }
