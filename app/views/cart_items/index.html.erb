@@ -1,0 +1,37 @@
+<div class='cart-wrapper'>
+  <h1>Your Cart</h1>
+
+  
+
+  <table class='cart-table'>
+    <tr>
+      <th>Product</th>
+      <th>Decription</th>
+      <th>Seller</th>
+      <th>Quantity in kg</th>
+      <th>Remove</th>
+      <th>Cost</th>
+    </tr>
+    <tr>
+    <% @cart_items.each do |item| %>
+      <td><%= item.product.name %></td>
+      <td><%= item.product.description %></td>
+      <td><%= item.product.user.firstname %> <%= item.product.user.lastname %></td>
+      <td><%= item.product.quantity %></td>
+      <td><%= link_to 'Remove from Cart', cart_item_path(item), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      <td><%= item.product.price %>.00</td>
+      
+    </tr>
+
+  <% end %>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Total:</td>
+    <td>$<%= @cart.total_price %>.00</td>
+  </tr>
+  </table>
+  
+</div>

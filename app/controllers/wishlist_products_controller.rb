@@ -12,8 +12,9 @@ class WishlistProductsController < ApplicationController
 
  def destroy
   wishlist_product = WishlistProduct.find(params[:id])
-  @wishlist_product.destroy
+  wishlist_product.destroy
 
+  redirect_to profile_show_path
  end 
 
 

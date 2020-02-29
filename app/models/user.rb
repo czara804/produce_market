@@ -8,4 +8,10 @@ class User < ApplicationRecord
   has_one_attached :profile
   has_many :wishlist_products
   has_one :cart
+
+  after_create :create_cart
+  
+  def create_cart
+    cart = Cart.create(user: self)
+  end 
 end
