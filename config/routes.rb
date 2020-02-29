@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get 'profile/show'
   get 'profile/edit'
 
+  get "/payments/success", to: "payments#success"
+  post "/payments/webhook", to: "payments#webhook"
+
   root to: 'welcome#index'
 
   as :user do

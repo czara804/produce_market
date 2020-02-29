@@ -11,8 +11,9 @@ class ProductsController < ApplicationController
   end
 
   def show
-  #  @product = Product.find(params[:id])
-  find_product
+    find_product
+
+
   end
 
   def new

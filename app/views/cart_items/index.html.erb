@@ -34,4 +34,27 @@
   </tr>
   </table>
   
+
+
+<button data-stripe="payment">
+  Pay Total: <%= number_to_currency(@cart.total_price) %>
+</button>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  document
+    .querySelector("[data-stripe='payment']")
+    .addEventListener("click", () => {
+      const stripe = Stripe(
+        "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+      );
+      console.log(stripe)
+      stripe.redirectToCheckout({
+        sessionId: "<%= @session_id %>"
+      });
+    });
+</script>
+
+
 </div>
