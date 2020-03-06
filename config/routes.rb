@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  root to: 'welcome#index'
+  
   get 'profile/show'
   get 'profile/edit'
 
   get "/payments/success", to: "payments#success"
   post "/payments/webhook", to: "payments#webhook"
-
-  root to: 'welcome#index'
 
   as :user do
     get 'profile/show', :to => 'devise/registrations#edit', :as => :user_root
