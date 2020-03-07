@@ -10,12 +10,12 @@ body {
 
 .products-group {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 20px;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-gap: 50px;
   padding: 5%;
-  margin: 0 2%;
+  margin: 0 5%;
   // border: 2px solid black;
-  background-image: url(/assets/flowers.jpg);
+  // background-image: url(/assets/flowers.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -24,17 +24,19 @@ body {
 .product-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   // align-items: center;
-  border: 2px solid black;
+  // border: 2px solid black;
   background-color: ghostwhite;
   height: auto;
-  box-shadow: 5px 5px #888888;
+  box-shadow: 5px 5px lightgrey;
 }
 
 .product-text {
   background-color: black;
   opacity: 0.5;
   color: ghostwhite;
+  padding: 0.5%;
 }
 
 .name {
@@ -59,6 +61,10 @@ body {
   
 }
 
+.name button {
+  cursor: pointer;
+}
+
 // add/edit product form 
 .field {
   margin-left: 2%;
@@ -81,17 +87,17 @@ body {
 }
 
 .product-photo img {
-  width: 200px;
-  height: 200px;
+  max-width: 300px;
+  height: auto;
   image-rendering: smooth;
 }
 
 .searchbar {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 1%;
-  padding-right: 1%;
-
+  // padding-bottom: 1%;
+  // padding-right: 1%;
+  margin: 2% 45%;
 }
 
 .prod-title {

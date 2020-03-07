@@ -3,3 +3,61 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2% 0 2%;
+  background-color: oldlace;
+}
+
+.hi-msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info {
+  background-color: mistyrose;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2%;
+}
+
+.profile-pic {
+  background-color: aquamarine;
+  
+  img {
+    max-width:100%;
+    height:auto;
+}
+}
+
+.profile-deets {
+  background-color: burlywood;
+  margin-left: 3%;
+}
+
+
+.user-things {
+  background-color: lightsteelblue;
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-products {
+  background-color: lightskyblue;
+  padding: 2%;
+}
+
+.wishlist {
+  background-color: aquamarine;
+  padding: 2%;
+  max-width: 500px;
+}
+
+
+.orders {
+  background-color: lightpink;
+  padding: 2%;
+}

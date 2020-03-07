@@ -37,26 +37,28 @@ header {
 }
 
 .main-logo {
-  font-family: 'Abril Fatface', cursive;
-  margin: 0 10%;
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Fredericka the Great', cursive;
+  
 }
 
-
-/* header img {
-  height: 30px;
-  width: 20px;
-} */
+.user-links {
+  display: flex;
+  align-items: center;
+}
 
 .user-nav img {
-  height: 75px;
-  width: 60px;
-  border-radius: 50%
+  height: 60px;
+  width: 50px;
+  border-radius: 50%;
+  
 }
 
 .user-nav {
   display: flex;
   align-items: center;
-
+  justify-content: center;
+  padding: 1%;
 }
 
 .navlinks li {
@@ -93,5 +95,6 @@ a:hover {
 .main-logo-big {
   font-size: 150px;
   margin-left: 4%;
-  font-family: 'Abril Fatface', cursive;
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Fredericka the Great', cursive;
 }

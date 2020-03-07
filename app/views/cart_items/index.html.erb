@@ -35,10 +35,11 @@
   </table>
   
 
-
-<button data-stripe="payment">
-  Pay Total: <%= number_to_currency(@cart.total_price) %>
-</button>
+<div class='pay-btn'>
+  <button data-stripe="payment">
+    Pay Total: <%= number_to_currency(@cart.total_price) %>
+  </button>
+</div>
 
 <script src="https://js.stripe.com/v3/"></script>
 

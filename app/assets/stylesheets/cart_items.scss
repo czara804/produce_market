@@ -5,6 +5,7 @@
 .cart-wrapper {
   display: flex;
   flex-direction: column;
+  margin-left: 2%;
 }
 
 // .cart-table {
@@ -23,9 +24,31 @@
  
 }
 
-
-
 .cart-table th, td {
   border-bottom: 1px solid black;
   text-align: left;
+}
+
+.pay-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 5%;
+  
+}
+
+button {
+  background-color:seagreen;
+  cursor: pointer;
+  border-radius: 20px;
+  color: beige;
+  font-size: large;
+  box-shadow: 0 6px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }

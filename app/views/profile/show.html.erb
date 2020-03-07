@@ -1,61 +1,93 @@
 
-<h1>Welcome, <%= current_user.firstname%></h1>
+<div class='profile-wrapper'>
+  <div class='hi-msg'>
+    <h1>Welcome, <%= current_user.firstname%></h1>
+    <%= Date.current.strftime("%A.%-d.%B.%Y")%>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+  </div>
 
+  <div class='profile-info'>
+    <div class='profile-pic'>
+      <h3>My details:</h3>
+      <%= image_tag current_user.profile if current_user.profile.attached? %>
+    </div>
+    <div class='profile-deets'>
+      <p>Name: <%= current_user.firstname %> <%= current_user.lastname %> </p>
+      <p>Email: <%= current_user.email %>
+      <p>Bio: <%= current_user.bio %></p>
+      <%= link_to "Edit your details", edit_user_registration_path %>
+    </div>
+    <div>
+      <%= Date.current.strftime("%A.%-d.%B.%Y")%>
+    </div>
+  </div>
+  <div class='user-things'>
+    <div class='user-products'>
+      <h2>My Products</h2>
+      <%= link_to "Add a product", new_product_path %>
+      <p>Currently Selling</p>
+      <table>
+      <% @products.each do |product|%>
+      <tr>
+        <td><%= product.name  %></td>
+        <td><%= link_to "View product", product_path(product) %></td>
+        <td><%= link_to "Edit product", edit_product_path(product) %></td>
+        <td><%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+      <% end %>
+      </table>
+      <p>Sold</p>
+      <table>
+      <% @products.each do |product|%>
+      <% if product.available == false %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= link_to "View product", product_path(product) %></td>
+      </tr>
+      <% end %>
+      <% end %>
+      </table>
+    </div>
+    <div class='wishlist'>
+      <h2>My Wishlist</h2>
+      <table>
+      <% current_user.wishlist_products.each do |wish| %>
+        <tr>
+          <td><%= wish.product.name %> </td>
+          <td><%= wish.product.description %></td>
+          <td><%= wish.product.user.firstname %></td>
+          <td><%= link_to 'View', product_path(wish.product_id) %></td>
+          <td><%= link_to 'Remove', wishlist_product_path(wish), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
 
-<h3>About you:</h3>
+    <div class='orders'>
+      <h2>My Receipts</h2>
+      <table>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Seller</th>
+          <th>Purchase Date</th>
+        </tr>
+      <% current_user.orders.each do |order| %>
+        <tr>
+          <td><%= order.product.name %> </td>
+          <td><%= order.product.quantity %>kg</td>
+          <td>$<%= order.product.price %></td>
+          <td><%= order.product.user.firstname %></td>
+          <td><%= order.created_at %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  
+  </div>
 
-<div class='profile-info'>
-  <%= image_tag current_user.profile if current_user.profile.attached? %>
-  <p>Name: <%= current_user.firstname %> <%= current_user.lastname %> </p>
-  <p>Email: <%= current_user.email %>
-  <p>Bio: <%= current_user.bio %></p>
-
-  <%= link_to "edit details", edit_user_registration_path %>
 </div>
-<div class='user-products'>
-  <h2>My products</h2>
-  <%= link_to "Add a product", new_product_path %>
-  <p>Currently Selling</p>
-  <table>
-  <% @products.each do |product|%>
-  <% if product.available == true %>
-  <tr>
-    <td><%= product.name  %></td>
-    <td><%= link_to "View product", product_path(product) %></td>
-    <td><%= link_to "Edit product", edit_product_path(product) %></td>
-    <td><%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-  </tr>
-  <% end %>
-  <% end %>
-  </table>
-  <p>Sold</p>
-   <table>
-  <% @products.each do |product|%>
-  <% if product.available == false %>
-  <tr>
-    <td><%= product.name  %></td>
-    <td><%= link_to "View product", product_path(product) %></td>
-  </tr>
-  <% end %>
-  <% end %>
-  </table>
-</div>
-<div class='wishlist'>
-  <h2>My Wishlist</h2>
-  <table>
-  <% current_user.wishlist_products.each do |wish| %>
-    <tr>
-      <td><%= wish.product.name %> </td>
-      <td><%= wish.product.description %></td>
-      <td><%= wish.product.user.firstname %></td>
-      <td><%= link_to 'Remove', wishlist_product_path(wish), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-    <% end %>
-  </table>
-
-</div>
-
-
 
 
 

@@ -3,10 +3,8 @@ class ProfileController < ApplicationController
   before_action :find_user
   
   def show
-    @products = Product.where(user_id: current_user.id).where(available: true)
-    
-    @products = Product.where(user_id: current_user.id).where(available: false)
-    
+    @products = Product.where(user_id: current_user.id)
+
   end
 
   def edit
