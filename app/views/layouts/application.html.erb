@@ -32,12 +32,14 @@
       <ul class='navlinks'>
         <li><%= link_to 'Check out the Market', products_path %></li>
         <li><%= link_to 'Contribute', new_product_path %></li>
-        <li><%= link_to 'Cart', cart_items_path %></li>
+        <li><%= link_to 'Basket', cart_items_path %></li>
         <li><%= link_to 'About us', products_path %></li>
       </ul>
     </nav>
   </header>
-
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %> 
     <%= yield %>
   </body>
 </html>
