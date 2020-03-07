@@ -14,15 +14,29 @@
 </div>
 <div class='user-products'>
   <h2>My products</h2>
-  <%= link_to "add a product", new_product_path %>
+  <%= link_to "Add a product", new_product_path %>
+  <p>Currently Selling</p>
   <table>
   <% @products.each do |product|%>
+  <% if product.available == true %>
   <tr>
     <td><%= product.name  %></td>
     <td><%= link_to "View product", product_path(product) %></td>
     <td><%= link_to "Edit product", edit_product_path(product) %></td>
     <td><%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
+  </tr>
+  <% end %>
+  <% end %>
+  </table>
+  <p>Sold</p>
+   <table>
+  <% @products.each do |product|%>
+  <% if product.available == false %>
+  <tr>
+    <td><%= product.name  %></td>
+    <td><%= link_to "View product", product_path(product) %></td>
+  </tr>
+  <% end %>
   <% end %>
   </table>
 </div>

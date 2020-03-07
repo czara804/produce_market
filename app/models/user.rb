@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one_attached :profile
   has_many :wishlist_products
   has_one :cart
+  has_many :orders
 
   after_create :create_cart
   

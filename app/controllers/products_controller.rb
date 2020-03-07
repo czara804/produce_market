@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   
   def index
     # @products = Product.all
-    @products = Product.search(params[:search])
+    @products = Product.search(params[:search]).where(available: true)
 
   end
 

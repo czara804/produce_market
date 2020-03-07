@@ -3,7 +3,9 @@ class ProfileController < ApplicationController
   before_action :find_user
   
   def show
-    @products = Product.where(user_id: current_user.id)
+    @products = Product.where(user_id: current_user.id).where(available: true)
+    
+    @products = Product.where(user_id: current_user.id).where(available: false)
     
   end
 

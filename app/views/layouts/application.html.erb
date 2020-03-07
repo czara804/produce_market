@@ -7,28 +7,30 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   <header>
-   <div class='user-nav'>
-      <% if user_signed_in? %>
-        <%= image_tag current_user.profile if current_user.profile.attached? %>
-        Welcome, 
-        <%= link_to current_user.firstname, profile_show_path %> |  
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign up', new_user_registration_path %> |
-        <%= link_to 'Sign in', new_user_session_path %>
-      <% end %>
-    </div>
-    <div>
-    <%# <%= image_tag "juice.png" %> 
-    <h2><%= link_to 'Agora', '/' %></h2>
+    <div class='user-nav'>
+      <div class='main-logo'>
+        <h2><%= link_to 'AGORA', '/' %></h2>
+      </div>
+      <div class='user-links'>
+        <% if user_signed_in? %>
+          <%= image_tag current_user.profile if current_user.profile.attached? %>
+          Welcome, 
+          <%= link_to current_user.firstname, profile_show_path %> |  
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Sign up', new_user_registration_path %> |
+          <%= link_to 'Sign in', new_user_session_path %>
+        <% end %>
+      </div>
     </div>
     <nav>
-   
       <ul class='navlinks'>
         <li><%= link_to 'Check out the Market', products_path %></li>
         <li><%= link_to 'Contribute', new_product_path %></li>

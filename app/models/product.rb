@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   belongs_to :user
   has_many :wishlist_products, dependent: :destroy
   has_many :cart_items, dependent: :destroy
+  has_one :order
 
   def self.search(search)
     if search
