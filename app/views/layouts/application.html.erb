@@ -16,7 +16,7 @@
   <header>
     <div class='user-nav'>
       <div class='main-logo'>
-        <h2><%= link_to 'Agora', '/' %></h2>
+        <h1><%= link_to 'Agora', '/' %></h1>
       </div>
       <div class='user-links'>
         <% if user_signed_in? %>
@@ -24,8 +24,8 @@
           <p>Hi there, <%= link_to current_user.firstname, profile_show_path %></p>
           <%# <%= link_to 'Sign out', destroy_user_session_path, method: :delete %> 
         <% else %>
-          <%= link_to 'Sign up', new_user_registration_path %> |
-          <%= link_to 'Sign in', new_user_session_path %>
+          <p>__<%= link_to 'Sign up', new_user_registration_path %><p>__or__
+          <p><%= link_to 'Sign in', new_user_session_path %>__</p>
         <% end %>
       </div>
     </div>

@@ -36,30 +36,29 @@ header {
   background-color:  #e9ecf1;
 }
 
-.main-logo {
-  /* font-family: 'Abril Fatface', cursive; */
-  font-family: 'Fredericka the Great', cursive;
-  
-}
-
-.user-links {
+.user-nav {
   display: flex;
   align-items: center;
+  padding-left: 3%;
+
 }
 
 .user-nav img {
   height: 60px;
   width: 50px;
   border-radius: 50%;
-  
 }
 
-.user-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1%;
+.main-logo {
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Fredericka the Great', cursive;
 }
+
+.user-links {
+  display: flex;
+  align-items: center; 
+}
+
 
 .navlinks li {
   display: inline-block;
@@ -97,4 +96,15 @@ a:hover {
   margin-left: 4%;
   /* font-family: 'Abril Fatface', cursive; */
   font-family: 'Fredericka the Great', cursive;
+}
+
+.devise-form {
+  margin-left: 5%;
+  margin-right: 50%;
+}
+
+.notice {
+  margin-left: 10%;
+  background-color: darkgreen;
+  color: white;
 }

@@ -1,17 +1,29 @@
 
 <div class='product-wrapper'>
-  <h1><%= @product.name %> </h1>
 
-   <p>Description: <%= @product.description %></p>
-   <p>Produced by:<%= @product.user.firstname %>
-    <p>Cost: $<%= @product.price %> for <%= @product.quantity %>kg</p>
-    <p>Pick-up or Delivery: <%= @product.delivery_option %> </p>
-    <p>Available from: <%= @product.date_available %></p>
-    <p><%= image_tag @product.photo if @product.photo.attached? %> </p>
+ <div class='prod-img'>
+      <p><%= image_tag @product.photo if @product.photo.attached? %> </p>
+    </div>
+
+  <div class='product-details'>
+
+    <h1><%= @product.name %> </h1>
+
+    <p>Description: <br>
+    <%= @product.description %></p>
+    <p>Produced by: <br>
+    <%= @product.user.firstname %><br>
+    Questions? <%= @product.user.email %></p>
+    <p>Cost: <br>
+    $<%= @product.price %> for <%= @product.quantity %>kg</p>
+      <p>Selected delivery option (Pick-up/Delivery/Either): <br>
+      <%= @product.delivery_option %> </p>
+      <p>Available from: <%= @product.date_available %></p>
+      <%= button_to 'Add to Basket', add_cart_item_path(@product.id) %>
+    </div>
+   
+  <%# change to add-to-cart path  %>
+    
+  
 </div>
-
-<%# change to add-to-cart path  %>
-<%= button_to 'Add to Basket', add_cart_item_path(@product.id) %>
-
-
 

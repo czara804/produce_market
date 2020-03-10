@@ -104,3 +104,30 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+.product-wrapper {
+  display: flex;
+  height: 80vh;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  background-color: darksalmon;
+  width: 30%;
+  padding: 2%;
+  // margin-right: 10%;
+}
+
+.prod-img {
+  display: flex;
+  margin-left: 8%;
+  align-items: center;
+
+  img {
+    width: 50vw;
+  
+  }
+}
+
