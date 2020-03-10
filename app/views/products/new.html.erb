@@ -1,8 +1,7 @@
-<h1 class='prod-title'>Sharing is most definitely caring - Add your products below</h1>
+<div class='form-page'>
 
+  <h1 class='prod-title'>Sharing is most definitely caring - Add your products below</h1>
+  <%= render 'form', product: @product %>
+  <p class='back'><%= link_to 'Back', products_path %></p>
 
-<%= render 'form', product: @product %>
-
-<%= link_to 'Back', products_path %>
-
-
+</div>

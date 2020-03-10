@@ -19,7 +19,9 @@
       <p>Selected delivery option (Pick-up/Delivery/Either): <br>
       <%= @product.delivery_option %> </p>
       <p>Available from: <%= @product.date_available %></p>
-      <%= button_to 'Add to Basket', add_cart_item_path(@product.id) %>
+      <% if current_user.id != @product.user_id %>
+        <%= button_to 'Add to Basket', add_cart_item_path(@product.id) %>
+      <%end %>
     </div>
    
   <%# change to add-to-cart path  %>

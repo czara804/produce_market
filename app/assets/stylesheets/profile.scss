@@ -8,56 +8,69 @@
   flex-direction: column;
   margin: 0 2% 0 2%;
   background-color: oldlace;
+  background-image: url(/assets/berries.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #30424b;
+  a:visited, a:link {
+    color: #dfbc8f;
+  }
 }
 
 .hi-msg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color:  #d4cfd0;
+}
+
+.hi-msg a:visited, a:link {
+  color: #30424b;
 }
 
 .profile-info {
-  background-color: mistyrose;
+  
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   padding: 2%;
 }
 
 .profile-pic {
-  background-color: aquamarine;
-  
   img {
-    max-width:100%;
-    height:auto;
+    max-width: 100%;
+    height: auto;
 }
 }
 
 .profile-deets {
-  background-color: burlywood;
+  background-color: #d4cfd0;
   margin-left: 3%;
 }
 
 
 .user-things {
-  background-color: lightsteelblue;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .user-products {
-  background-color: lightskyblue;
+  background-color: #30424b;
+  color: #d4cfd0;
   padding: 2%;
 }
 
 .wishlist {
-  background-color: aquamarine;
+  background-color: #30424b;
+  color: #d4cfd0;
   padding: 2%;
   max-width: 500px;
 }
 
 
 .orders {
-  background-color: lightpink;
+  background-color: #30424b;
+  color: #d4cfd0;
   padding: 2%;
 }

@@ -1,7 +1,8 @@
-<h1>Products#edit</h1>
 
-<h1>Edit your product</h1>
+<div class='form-page'>
+  <h1 class='prod-title'>Edit your product</h1>
+  <p class='back'><%= link_to 'Back', products_path %></p>
+  <%= render 'form', product: @product %>
+</div>
 
-<%= render 'form', product: @product %>
 
-<%= link_to 'Back', products_path %>
