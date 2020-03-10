@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
   
+  get '/about', to: "welcome#about"
   get 'profile/show'
   get 'profile/edit'
 

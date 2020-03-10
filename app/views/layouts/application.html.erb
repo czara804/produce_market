@@ -16,13 +16,12 @@
   <header>
     <div class='user-nav'>
       <div class='main-logo'>
-        <h2><%= link_to 'AGORA', '/' %></h2>
+        <h2><%= link_to 'Agora', '/' %></h2>
       </div>
       <div class='user-links'>
         <% if user_signed_in? %>
           <%= image_tag current_user.profile if current_user.profile.attached? %>
-          Hi there, 
-          <%= link_to current_user.firstname, profile_show_path %>
+          <p>Hi there, <%= link_to current_user.firstname, profile_show_path %></p>
           <%# <%= link_to 'Sign out', destroy_user_session_path, method: :delete %> 
         <% else %>
           <%= link_to 'Sign up', new_user_registration_path %> |
@@ -35,7 +34,7 @@
         <li><%= link_to 'Check out the Market', products_path %></li>
         <li><%= link_to 'Contribute', new_product_path %></li>
         <li><%= link_to 'Basket', cart_items_path %></li>
-        <li><%= link_to 'About us', products_path %></li>
+        <li><%= link_to 'About us', about_path %></li>
       </ul>
     </nav>
   </header>
