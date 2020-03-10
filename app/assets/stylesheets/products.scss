@@ -91,6 +91,12 @@ body {
   padding: 2%;
 }
 
+.index-wrapper {
+  background-image: url(/assets/smoothie.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .product-photo img {
   max-width: 300px;
   height: auto;
@@ -108,6 +114,8 @@ body {
 .prod-title {
   display: flex;
   justify-content: space-around;
+  color: whitesmoke;
+  
 }
 
 .back {
