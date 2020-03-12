@@ -16,7 +16,8 @@
               <div class='name'><%= product.name%>
               <% if user_signed_in? %>
               <% if current_user.id != product.user_id %>
-              <%= button_to 'Add to wishlist', add_wishlist_product_path(product), :class => 'wishlist-btn' %>
+              <% wishlist_class = 'in-wishlist' if current_user.wishlist_products.where(product: product).any? %>
+              <%= button_to 'Add to wishlist', add_wishlist_product_path(product), :class => "wishlist-btn #{wishlist_class}" %>
               <% end %>
               <% end %>
               </div>

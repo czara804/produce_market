@@ -6,11 +6,12 @@ class WishlistProductsController < ApplicationController
 
   def add
     product = Product.find(params[:id])
-    if current_user.wishlist_products.exclude?(product.id)
+    if current_user.wishlist_products.map(&:product).include?(product)
+      redirect_to profile_show_path, notice: "#{product.name} is already in your wishlist"
+    else      
       WishlistProduct.create!(product: product, user: current_user)
-    else
-      redirect_to show_profile_path, notice: "#{product.name} is already in your wishlist"
-    end 
+      # redirect somewhere?
+    end
   end
 
  def destroy

@@ -48,11 +48,13 @@ body {
   
 }
 
+// add product form background
 .form-page {
   background-image: url(/assets/apricot.jpg);
   background-size: cover;
 }
 
+// add/edit product form
 .basic-prod-form {
   display: flex;
   flex-direction: column;
@@ -66,12 +68,24 @@ body {
   color: darksalmon;
 }
 
+// indicate link
 .wishlist-btn {
   cursor: pointer;
 }
 
 .wishlist-btn:active {
   background-color: maroon;
+}
+
+// once wishlist button clicked, change colour
+.in-wishlist {
+  background-color: maroon;
+}
+
+// basket button
+.basket-btn {
+  cursor: pointer;
+  border: 3px solid darkgreen;
 }
 
 // add/edit product form 
@@ -133,6 +147,7 @@ body {
   height: 80vh;
 }
 
+// show page item details 
 .product-details {
   display: flex;
   flex-direction: column;
@@ -143,6 +158,11 @@ body {
   // margin-right: 10%;
 }
 
+.product-details h3 {
+  border-bottom: 2px solid black;
+}
+
+// product image on show page
 .prod-img {
   display: flex;
   margin-left: 10%;
@@ -150,7 +170,23 @@ body {
 
   img {
     max-width: 60vw;
-    margin-top: 2%;
+    margin-top: 4%;
   }
 }
 
+
+
+// about seller section on show page
+.about-s { 
+  margin: 0 5% 0 0;
+  display: flex;
+  padding: 2%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.seller-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 45%;
+}

@@ -41,11 +41,7 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %> 
-    <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
-    <% end %>
+ 
     <%= yield %>
 
     <footer>
