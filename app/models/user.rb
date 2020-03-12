@@ -10,6 +10,9 @@ class User < ApplicationRecord
   has_one :cart
   has_many :orders
 
+  validates :bio, length: { maximum: 1000,
+  too_long: "%{count} characters is the maximum allowed" }
+
   after_create :create_cart
   
   def create_cart

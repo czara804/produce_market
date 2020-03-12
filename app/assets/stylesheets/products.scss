@@ -151,10 +151,11 @@ body {
 .product-details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: darksalmon;
+  // justify-content: space-between;
+  background-color: ghostwhite;
+  border: 3px solid darkgreen;
   width: 50%;
-  padding: 2%;
+  padding: 0 2%;
   // margin-right: 10%;
 }
 
