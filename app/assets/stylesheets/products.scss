@@ -63,11 +63,14 @@ body {
   margin-right: 20%;
   padding: 4%;
   color: darksalmon;
-  
 }
 
-.name button {
+.wishlist-btn {
   cursor: pointer;
+}
+
+.wishlist-btn:active {
+  background-color: maroon;
 }
 
 // add/edit product form 
@@ -108,13 +111,14 @@ body {
   justify-content: flex-end;
   // padding-bottom: 1%;
   // padding-right: 1%;
-  margin: 2% 45%;
+  margin: 2% 20% 0 60%;
 }
 
 .prod-title {
   display: flex;
   justify-content: space-around;
-  color: whitesmoke;
+  color: black;
+  font-size: 50px;
   
 }
 

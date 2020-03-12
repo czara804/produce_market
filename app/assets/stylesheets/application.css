@@ -39,8 +39,7 @@ header {
 .user-nav {
   display: flex;
   align-items: center;
-  padding-left: 3%;
-  margin-right: 5%;
+  padding-left: 2%;
 }
 
 .user-nav img {
@@ -54,9 +53,15 @@ header {
   font-family: 'Fredericka the Great', cursive;
 }
 
+.main-logo a:visited, a:link, a:hover {
+  color: black;
+  text-decoration: none
+}
+
 .user-links {
   display: flex;
   align-items: center; 
+  color: darkgreen;
 }
 
 

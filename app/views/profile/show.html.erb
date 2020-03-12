@@ -25,13 +25,14 @@
       <%= link_to "Add a product", new_product_path %>
       <p>Currently Selling</p>
       <table>
-      <% @products.each do |product|%>
+      <% @products.each do |product| if product.available%>
       <tr>
         <td><%= product.name  %></td>
-        <td><%= link_to "View product", product_path(product) %></td>
-        <td><%= link_to "Edit product", edit_product_path(product) %></td>
+        <td><%= link_to "View", product_path(product) %></td>
+        <td><%= link_to "Edit", edit_product_path(product) %></td>
         <td><%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
+      <% end %>
       <% end %>
       </table>
       <p>Sold</p>
@@ -69,6 +70,7 @@
           <th>Quantity</th>
           <th>Price</th>
           <th>Seller</th>
+          <th>Contact</th>
           <th>Purchase Date</th>
         </tr>
       <% current_user.orders.each do |order| %>
@@ -77,6 +79,7 @@
           <td><%= order.product.quantity %>kg</td>
           <td>$<%= order.product.price %></td>
           <td><%= order.product.user.firstname %></td>
+          <td><%= order.product.user.email %></td>
           <td><%= order.created_at %></td>
         </tr>
         <% end %>
