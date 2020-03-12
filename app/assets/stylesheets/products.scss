@@ -10,8 +10,9 @@ body {
 
 .products-group {
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+  grid-gap: 1.5rem;
   padding: 5%;
   margin: 0 5%;
   // border: 2px solid black;

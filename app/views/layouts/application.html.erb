@@ -21,7 +21,7 @@
       <div class='user-links'>
         <% if user_signed_in? %>
           <%= image_tag current_user.profile if current_user.profile.attached? %>
-          <p>Hi there, <%= link_to current_user.firstname, profile_show_path %></p>
+          <p>Hi, <%= link_to current_user.firstname, profile_show_path %></p>
           <%# <%= link_to 'Sign out', destroy_user_session_path, method: :delete %> 
         <% else %>
           <p>__<%= link_to 'Sign up', new_user_registration_path %><p>__or__
