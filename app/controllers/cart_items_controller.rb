@@ -4,7 +4,6 @@ class CartItemsController < ApplicationController
   def index
     @cart = current_user.cart
     @cart_items = current_user.cart.cart_items.available
-    # raise
     unless current_user.cart.cart_items.empty?
       session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
