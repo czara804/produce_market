@@ -115,8 +115,10 @@ body {
   background-attachment: fixed;
 }
 
+// photo on index in product card
 .product-photo img {
-  max-width: 300px;
+  // max-width: 300px;
+  width: 100%;
   height: auto;
   image-rendering: smooth;
 }
