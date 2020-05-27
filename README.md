@@ -1,7 +1,7 @@
-##T2A3 - Marketplace App
+##T2A3 - Marketplace App ##
 Developer: Cassandra Zara (CodeIRL)
 
-##The Agora
+##The Agora##
 
 *R7* **Problem the app endeavours to solve**
 
